@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'announcements',
     'django_nose',
     'core',
+    'voting',
+    'secretballot',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -50,6 +52,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'secretballot.middleware.SecretBallotIpMiddleware',
 ]
 
 ROOT_URLCONF = 'ndlug.urls'
